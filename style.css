@@ -4,17 +4,23 @@
     padding: 0;
 }
 
+#logo-part{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 15px;
+}
 
 
 body{
-    background-color:#ca8b41;
-    color:black;
-    background-color: #DFDBE5;
-    background-color: #c37c1f;
     
-    background-color: #ffffff;
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.09'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color:black;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,255,255,1) 100%);
     font-size: 16px;
     font-family: 'Oxygen', sans-serif;
 }
@@ -44,20 +50,47 @@ ul {
     margin: auto;
 }
 
-
-.nav-main >ul{
-
-display: table;
-overflow: hidden;
-width: 100%;
-background: white;
-position:relative;
-
+.nav-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.nav-main >ul{
+    display: table;
+    overflow: hidden;
+    width: 100%;
+    background: white;
+    position:relative;
+    transition:1s;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    -ms-transition:1s;
+    -o-transition:1s;
+}
+
+.nav-main >ul>li{
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+
+
 .nav-main >ul>li:hover{
-    opacity: .5;
-  }
+    /* opacity: .5; */
+    color: white;
+    background-color: blue;
+}
+
+.nav-main >ul>li>a:hover{
+    
+    color: white;
+    
+}
 
 .nav-main > ul li{
     display: table-cell;
@@ -69,13 +102,12 @@ position:relative;
 
 /* Orde para el logo*/
 .nav-brand {
-
     width: 60px;
-
+    padding: 10px
 }
 
 .nav-main > ul li a{
-    color #0000;
+    color: rgb(0, 0, 0);
     display: block;
     line-height: 20px;
     padding:20px;
@@ -135,20 +167,36 @@ transition: all .3s ease;
 
 
 .btn{
-    cursor: pointer;
+    background-color: #4CAF50;
+    /*Green*/border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    border: 0;
-    font-weight: bold;
-    padding: 10px 10px;
-    background: whitesmoke;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    margin: 10px;
+}
+
+.btn {
+    background-color: transparent; 
     color: black; 
-    font-size: 11px;
-    border: 1px solid;
-    margin: 10px 10px ;
+    /* border: 2px solid #060552; */
 }
 
 .btn:hover{
     opacity: .7;
+    background-color: #060552;
+    color: white;
 }
 
 .showcase p {
@@ -163,6 +211,12 @@ transition: all .3s ease;
    }
 
 /*New-Cards o Trabajos*/
+
+.cards-products{
+    background-color: white;
+    border-radius: 9px;
+    padding: 10px;
+}
 
 .news-cards{
 
@@ -236,7 +290,7 @@ color: black;
 
     width: 50%;
     padding: 100px 0 0 30px;
-    color: white;
+    color: black;
 }
 
 /*Social*/
@@ -256,6 +310,15 @@ color: black;
     align-items:center;
     justify-content: center;
     
+}
+
+.cards-banner-two p,
+.cards-banner-two h2,
+.cards-banner-two a{
+
+margin: 20px 0 20px 0;
+color: black;
+
 }
 
 .links a{
